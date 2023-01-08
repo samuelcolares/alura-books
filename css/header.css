@@ -1,0 +1,199 @@
+.header {
+    background-color: var(--secondary-background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 3.77em;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.button__container,
+.logo-title,
+.header-nav,
+.icon-text {
+    display: none;
+}
+
+.header__burgerMenu {
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/Menu.svg);
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container__imagem {
+    padding: 1em;
+    height: 30px;
+}
+
+.img_padding {
+    padding-right: 1.5em;
+}
+
+.menu-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+    z-index: 1;
+}
+
+.button__container:checked ~ .menu-list {
+    display: block;
+}
+
+.menu-list li {
+    padding: 1em;
+    background-color: white;
+}
+
+.menu-list__title {
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+.menu-list__link {
+    text-transform: uppercase;
+    background: var(--azul-degrade);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.button__container:checked + label > .header__burgerMenu {
+    background-image: url(../img/MenuAberto.svg), var(--azul-degrade);
+}
+
+@media screen and (min-width: 1024px) {
+    .fav-icon,
+    .header__burgerMenu,
+    .menu-list__title,
+    .icon-text {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-evenly;
+        height: 4.5em;
+    }
+
+    .container__imagem,
+    .img_padding {
+        padding: 0;
+    }
+    .logo {
+        height: 60%;
+    }
+
+    .logo-title {
+        font-family: "josefin sans";
+        font-size: 30px;
+        display: block;
+        padding-top: 0.5em;
+        padding-left: 0.3em;
+    }
+
+    .header-nav {
+        display: flex;
+        gap: 2em;
+    }
+    .logo-title b {
+        font-weight: bold;
+    }
+    .header-nav__item a {
+        text-decoration: none;
+        color: black;
+    }
+    .header-nav__item span {
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 1em 10px;
+    }
+
+    .button__container:checked + label > span {
+        background: var(--azul-degrade);
+        color: white;
+    }
+
+    .menu-list {
+        top: 80%;
+        width: 15vw;
+    }
+
+    .menu-list > .menu-list__item:active {
+        background: var(--azul-degrade);
+    }
+
+    .menu-list .menu-list__item:active > .menu-list__link {
+        -webkit-text-fill-color: white;
+    }
+
+    .icon {
+        gap: 5em;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .icon-text {
+        display: inline;
+    }
+    .icon a {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .header-nav {
+        margin-right: 35em;
+    }
+
+    .button__container:checked ~ .menu-list {
+        display: none;
+    }
+
+    .button__container {
+        display: none;
+    }
+
+    .button__container:checked + label > span {
+        background: none;
+        color: inherit;
+    }
+    .header-nav__item label {
+        cursor: pointer;
+    }
+
+    .header-nav > .header-nav__item:hover > .menu-list {
+        display: block;
+    }
+    .menu-list {
+        width: 10vw;
+    }
+    .header-nav > .header-nav__item:hover,
+    .header-nav > .header-nav__item:hover > a {
+        background: var(--azul-degrade);
+        color: white;
+    }
+    .header-nav__item {
+        padding: 1em 0;
+    }
+    .menu-list > .menu-list__item:hover{
+        background: var(--azul-degrade);
+    }
+    .menu-list > .menu-list__item:hover > a{
+        -webkit-text-fill-color:white;
+        color: white;
+    }
+}
+

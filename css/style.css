@@ -1,0 +1,22 @@
+@import url(../css/header.css);
+@import url(../css/banner.css);
+@import url(../css/carrossel.css);
+@import url(../css/topicos.css);
+@import url(../css/contato.css);
+@import url(../css/footer.css);
+
+:root {
+    --background-color: #ebecee;
+    --secondary-background-color: #ffffff;
+    --azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+    --button-color: #002f52;
+    --title-color: #eb9b00;
+    --primary-font: "poppins";
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--primary-font);
+    font-size: 16px;
+    font-weight: 400;
+}
